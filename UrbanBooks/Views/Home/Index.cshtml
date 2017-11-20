@@ -1,0 +1,14 @@
+﻿@using UrbanBooks.Common
+@using UrbanBooks.Web;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <input type="hidden" value="" name="hdSelectedLanguageId" id="hdSelectedLanguageId" />
+    <label id="lblTagLine">
+        @Utility.GetResourceValue("lblTagLine")
+    </label>
+}
