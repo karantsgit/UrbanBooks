@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddressRequired" xml:space="preserve">
+    <value>Address is Required.</value>
+  </data>
+  <data name="Areyousurewanttochangeprojectstatus" xml:space="preserve">
+    <value>Are you sure want to change project status?</value>
+  </data>
+  <data name="AreyouSureYouWantToChangeStatusOfCustomer" xml:space="preserve">
+    <value>Are you Sure You Want To Change Status Of Customer?</value>
+  </data>
+  <data name="AreyouSureYouWantToChangeStatusOfUser" xml:space="preserve">
+    <value>Are you sure you want to change status of user</value>
+  </data>
+  <data name="AssignToRequired" xml:space="preserve">
+    <value>Assign To is Required</value>
+  </data>
+  <data name="CityRequired" xml:space="preserve">
+    <value>City Name is Required.</value>
+  </data>
+  <data name="Commentsrequired" xml:space="preserve">
+    <value>Comments is Required</value>
+  </data>
+  <data name="CompanyNameRequired" xml:space="preserve">
+    <value>Company Name is Required</value>
+  </data>
+  <data name="ConatactPersonRequired" xml:space="preserve">
+    <value>Conatact Person is Required.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Confirm Password is Required</value>
+  </data>
+  <data name="ContactNameRequired" xml:space="preserve">
+    <value>Contact Name is Required</value>
+  </data>
+  <data name="ContactSavedSuccessfully" xml:space="preserve">
+    <value>Contact Saved Successfully.</value>
+  </data>
+  <data name="ContactSouceDeletedSuccesffully" xml:space="preserve">
+    <value>Contact Source Deleted Successfully.</value>
+  </data>
+  <data name="ContactSourceRequired" xml:space="preserve">
+    <value>Contact Source is Required</value>
+  </data>
+  <data name="ContactSourceSavedSuccessfully" xml:space="preserve">
+    <value>Contact Source Saved Successfully.</value>
+  </data>
+  <data name="ContactSourceUpdatedSuccessfully" xml:space="preserve">
+    <value>Contact Source Updated Successfully.</value>
+  </data>
+  <data name="ContactUpdatedSuccessfully" xml:space="preserve">
+    <value>Contact Updated Successfully.</value>
+  </data>
+  <data name="CountryNameRequired" xml:space="preserve">
+    <value>Country is Required</value>
+  </data>
+  <data name="CurrentStatusRequired" xml:space="preserve">
+    <value>Current Status is Required</value>
+  </data>
+  <data name="CustomerRequired" xml:space="preserve">
+    <value>Customer is Required</value>
+  </data>
+  <data name="DeleteStatementConflict" xml:space="preserve">
+    <value>The DELETE statement conflicted with the REFERENCE constraint</value>
+  </data>
+  <data name="DescriptionRequired" xml:space="preserve">
+    <value>Description is Required</value>
+  </data>
+  <data name="DesignationDeletedsuccessfully" xml:space="preserve">
+    <value>Designation Deleted Successfully.</value>
+  </data>
+  <data name="DesignationRequired" xml:space="preserve">
+    <value>Designation is Required</value>
+  </data>
+  <data name="DesignationSavedSuccessfully" xml:space="preserve">
+    <value>Designation Saved Successfully.</value>
+  </data>
+  <data name="DesignationUpdatedsuccessfully" xml:space="preserve">
+    <value>Designation Updated Successfully.</value>
+  </data>
+  <data name="DomainDeletedSuccessfully" xml:space="preserve">
+    <value>Domain Deleted Successfully.</value>
+  </data>
+  <data name="DomainRequired" xml:space="preserve">
+    <value>Domain Name is Required</value>
+  </data>
+  <data name="DomainSavedsuccessfully" xml:space="preserve">
+    <value>Domain Saved Successfully.</value>
+  </data>
+  <data name="DomainUpdatedsuccessfully" xml:space="preserve">
+    <value>Domain Updated Successfully.</value>
+  </data>
+  <data name="EmailAddressAlreadyExists" xml:space="preserve">
+    <value>Email Address Already Exists!</value>
+  </data>
+  <data name="EmailAddressRequired" xml:space="preserve">
+    <value>Email Address is Required</value>
+  </data>
+  <data name="EmailBodyRequired" xml:space="preserve">
+    <value>Email Body is Required.</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>Please Enter Valid Email Address</value>
+  </data>
+  <data name="EmailSubjectRequired" xml:space="preserve">
+    <value>Email Subject is Required.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error! </value>
+  </data>
+  <data name="FirstNameInvalid" xml:space="preserve">
+    <value>Please Enter Valid First Name</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>First Name is Required</value>
+  </data>
+  <data name="FollowUpDetailsNotSaved" xml:space="preserve">
+    <value>Follow Up Details Not Saved!</value>
+  </data>
+  <data name="FollowUpDetailsSavedSuccessfully" xml:space="preserve">
+    <value>Follow Up Details Saved Successfully.</value>
+  </data>
+  <data name="FollowUpDetailsUpdatedSuccessfully" xml:space="preserve">
+    <value>Follow Up Details Updated Successfully.</value>
+  </data>
+  <data name="Followuptypedeletedsuccessfully" xml:space="preserve">
+    <value>Follow Up Type Deleted Successfully.</value>
+  </data>
+  <data name="FollowUpTypeRequired" xml:space="preserve">
+    <value>Follow Up Type is Required</value>
+  </data>
+  <data name="Followuptypesavedsuccefully" xml:space="preserve">
+    <value>Follow Up Type Saved Successfully.</value>
+  </data>
+  <data name="Followuptypeupdatedsuccessfully" xml:space="preserve">
+    <value>Follow Up Type Updated Successfully.</value>
+  </data>
+  <data name="FromDateRequired" xml:space="preserve">
+    <value>From Date is Requried</value>
+  </data>
+  <data name="FromEmailRequired" xml:space="preserve">
+    <value>From Email Required.</value>
+  </data>
+  <data name="HoursContainsNumbersonly" xml:space="preserve">
+    <value>Hours Contains Numbers Only</value>
+  </data>
+  <data name="Hoursisrequire" xml:space="preserve">
+    <value>Hours is Required</value>
+  </data>
+  <data name="InvalidFile" xml:space="preserve">
+    <value>Invalid File!</value>
+  </data>
+  <data name="InvalidLoginDetails" xml:space="preserve">
+    <value>Invalid login details!</value>
+  </data>
+  <data name="InvalidPostCode" xml:space="preserve">
+    <value>Invalid Post code</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>Url is Invalid.</value>
+  </data>
+  <data name="LastNameInvalid" xml:space="preserve">
+    <value>Please Enter Valid Last Name</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Last Name is Required</value>
+  </data>
+  <data name="MailSentSuccessfully" xml:space="preserve">
+    <value>Mail Sent Successfully.</value>
+  </data>
+  <data name="MessangersIdRequired" xml:space="preserve">
+    <value>Messanger Id is Required</value>
+  </data>
+  <data name="Messangertypedeletedsuccessfully" xml:space="preserve">
+    <value>Messanger Type Deleted Successfully.</value>
+  </data>
+  <data name="MessangerTypeRequired" xml:space="preserve">
+    <value>Messanger Type is Required</value>
+  </data>
+  <data name="MessangertypesavedSuccessfully" xml:space="preserve">
+    <value>Messanger Type Saved Successfully.</value>
+  </data>
+  <data name="MessangertypeUpdatedsuccessfully" xml:space="preserve">
+    <value>Messanger Type Updated Successfully.</value>
+  </data>
+  <data name="MobileNoInvalid" xml:space="preserve">
+    <value>Please Enter Valid Mobile Number</value>
+  </data>
+  <data name="MobileNoRequired" xml:space="preserve">
+    <value>Mobile Number is Required</value>
+  </data>
+  <data name="NewandConfirmShouldbeSame" xml:space="preserve">
+    <value>Password does not match</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>New Password is Required</value>
+  </data>
+  <data name="NewsletterSavedSuccessfully" xml:space="preserve">
+    <value>Newsletter Saved Successfully.</value>
+  </data>
+  <data name="NewsletterUpdatedSuccessfully" xml:space="preserve">
+    <value>Newsletter Updated Successfully.</value>
+  </data>
+  <data name="NextFollowUpDaterequired" xml:space="preserve">
+    <value> NextFollowUpDate is Required</value>
+  </data>
+  <data name="NoteDetailsNotSaved" xml:space="preserve">
+    <value>Note Details NotSaved.</value>
+  </data>
+  <data name="NoteDetailsSavedSuccessfully" xml:space="preserve">
+    <value>Note Details Saved Successfully.</value>
+  </data>
+  <data name="NoteDetailsUpdatedSuccessfully" xml:space="preserve">
+    <value>Note Details Updated Successfully.</value>
+  </data>
+  <data name="OldPasswordNotMatch" xml:space="preserve">
+    <value>Invalid Old Password</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>Old Password is Required</value>
+  </data>
+  <data name="PasswordChangedSuccessfully" xml:space="preserve">
+    <value>Password Changed Successfully. </value>
+  </data>
+  <data name="PasswordInvalid" xml:space="preserve">
+    <value>Please Enter Valid Password</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password is Required</value>
+  </data>
+  <data name="PhoneNoInvalid" xml:space="preserve">
+    <value>Please Enter Valid Phone No</value>
+  </data>
+  <data name="PleaseSelectContactToAssign" xml:space="preserve">
+    <value>Please select contact(s) to assign</value>
+  </data>
+  <data name="PleaseSelectTheContact" xml:space="preserve">
+    <value>Please select the Contact</value>
+  </data>
+  <data name="PrimaryTechnologyRequired" xml:space="preserve">
+    <value>Primary Technology is Required</value>
+  </data>
+  <data name="ProfileUpdatedSuccessfullly" xml:space="preserve">
+    <value>Profile Updated Successfully.</value>
+  </data>
+  <data name="ProjectDescriptionrequired" xml:space="preserve">
+    <value>Project Description is Required</value>
+  </data>
+  <data name="ProjectDetailsSavedSuccessfully" xml:space="preserve">
+    <value>Project Details Saved Successfully..</value>
+  </data>
+  <data name="ProjectTechonologyrequire" xml:space="preserve">
+    <value>Project Technology is Required</value>
+  </data>
+  <data name="ProjectTitleisRequire" xml:space="preserve">
+    <value>Project Title is Required</value>
+  </data>
+  <data name="RatingsRequired" xml:space="preserve">
+    <value>Ratings is Required</value>
+  </data>
+  <data name="ReAssignedToRequired" xml:space="preserve">
+    <value>Re-Assign To is Required</value>
+  </data>
+  <data name="RecordCannotBeDeleted" xml:space="preserve">
+    <value>This record link to another record(s), you can not delete this record</value>
+  </data>
+  <data name="ReportingToRequired" xml:space="preserve">
+    <value>Reporting To is Required</value>
+  </data>
+  <data name="RoleRequired" xml:space="preserve">
+    <value>Role is Required</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select file for import</value>
+  </data>
+  <data name="SelectValidFile" xml:space="preserve">
+    <value>Select Valid File.</value>
+  </data>
+  <data name="SentStatusRequired" xml:space="preserve">
+    <value>Sent Status is Required.</value>
+  </data>
+  <data name="SessionTimedOut" xml:space="preserve">
+    <value>Your session has timed out! Please login again to continue.</value>
+  </data>
+  <data name="StateRequired" xml:space="preserve">
+    <value>State Name is Required.</value>
+  </data>
+  <data name="StatusRequired" xml:space="preserve">
+    <value>Status is Required</value>
+  </data>
+  <data name="StatusUpdated" xml:space="preserve">
+    <value>Status Updated Successfully.</value>
+  </data>
+  <data name="SystemErrorOccurred" xml:space="preserve">
+    <value>An error has occurred. Please contact your system administrator.</value>
+  </data>
+  <data name="TaskAssignedSuccessfully" xml:space="preserve">
+    <value>Task Assigned Successfully.</value>
+  </data>
+  <data name="TaskAssigningFailed" xml:space="preserve">
+    <value>Task Assigning Failed!</value>
+  </data>
+  <data name="TaskDateChangedSuccessfully" xml:space="preserve">
+    <value>Task Date Changed Successfully.</value>
+  </data>
+  <data name="TaskDateRequired" xml:space="preserve">
+    <value>Task Date is Requried</value>
+  </data>
+  <data name="TaskReAssignedSuccessfully" xml:space="preserve">
+    <value>Task Re-Assigned Successfully.</value>
+  </data>
+  <data name="TechnologyDeletedSuccessfully" xml:space="preserve">
+    <value>Technology Deleted Successfully.</value>
+  </data>
+  <data name="TechnologyNamerequired" xml:space="preserve">
+    <value>Technology Name is Required.</value>
+  </data>
+  <data name="TechnologySavedsuccessfully" xml:space="preserve">
+    <value>Technology Saved Successfully.</value>
+  </data>
+  <data name="TechnologyUpdatedSuccessfully" xml:space="preserve">
+    <value>Technology Updated Successfully.</value>
+  </data>
+  <data name="Textrequired" xml:space="preserve">
+    <value>Text is Required.</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>Title is Required.</value>
+  </data>
+  <data name="ToDateRequired" xml:space="preserve">
+    <value>To Date is Required</value>
+  </data>
+  <data name="ToEmailRequired" xml:space="preserve">
+    <value>To Email Required.</value>
+  </data>
+  <data name="UserAddedSuccessfully" xml:space="preserve">
+    <value>User Added Successfully.</value>
+  </data>
+  <data name="UserNoLongerActive" xml:space="preserve">
+    <value>User is no longer active!</value>
+  </data>
+  <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>User Updated Successfully.</value>
+  </data>
+  <data name="YouhaveSelectthesameFile" xml:space="preserve">
+    <value>You have Selected the same File.</value>
+  </data>
+  <data name="QuestionRequired" xml:space="preserve">
+    <value>Question is Required.</value>
+  </data>
+</root>

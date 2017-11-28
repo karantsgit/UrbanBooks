@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace UrbanBooks
+namespace UrbanBooks.Web
 {
     public class FilterConfig
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UrbanBooks")]
+[assembly: AssemblyTitle("UrbanBooks.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("UrbanBooks")]
+[assembly: AssemblyProduct("UrbanBooks.Web")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1a51d743-ada0-49b1-8718-e02720f6aeb5")]
+[assembly: Guid("10b2f884-c0ba-45a8-9188-4c423f043b83")]
 
 // Version information for an assembly consists of the following four values:
 //

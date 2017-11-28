@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using UrbanBooks.Models;
+using UrbanBooks.Web.Models;
 
-namespace UrbanBooks
+namespace UrbanBooks.Web
 {
     public partial class Startup
     {

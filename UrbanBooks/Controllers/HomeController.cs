@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using UrbanBooks.Common;
+using UrbanBooks.Entity;
 using UrbanBooks.Service;
 
-namespace UrbanBooks.Controllers
+namespace UrbanBooks.Web.Controllers
 {
     public class HomeController : Controller
     {
@@ -29,5 +31,6 @@ namespace UrbanBooks.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+
     }
 }

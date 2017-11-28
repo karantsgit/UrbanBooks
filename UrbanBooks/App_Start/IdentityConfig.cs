@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using UrbanBooks.Models;
+using UrbanBooks.Web.Models;
 
-namespace UrbanBooks
+namespace UrbanBooks.Web
 {
     public class EmailService : IIdentityMessageService
     {

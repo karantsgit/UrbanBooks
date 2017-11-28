@@ -42,16 +42,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonHelper.cs" />
+    <Compile Include="ControllerHelper.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpression.cs" />
+    <Compile Include="ResourceModel.cs" />
+    <Compile Include="Security.cs" />
     <Compile Include="SessionHelper.cs" />
     <Compile Include="Utility.cs" />
+    <Compile Include="ViewHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UrbanBooks.Entity\UrbanBooks.Entity.csproj">
-      <Project>{8D676C90-8D5B-401D-B943-A747557D5F64}</Project>
-      <Name>UrbanBooks.Entity</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Message.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
