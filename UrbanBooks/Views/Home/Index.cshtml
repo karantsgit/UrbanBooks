@@ -1,4 +1,5 @@
-﻿@using UrbanBooks.Common
+﻿@model UrbanBooks.Entity.PurchaseModel
+@using UrbanBooks.Common
 @using UrbanBooks.Web;
 @using System.Web.Mvc;
 
@@ -6,8 +7,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
+<style type="text/css">
+    .carousel-inner img {
+        display: block;
+        max-width: 230px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+    }
+
+    .error span {
+        color: red;
+    }
+
+    .mandatoryField:after {
+        content: "*";
+        color: red;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+</style>
+
 <section class="tagline-image">
-    <img src="~/Content/Client_Image/tagline-image.jpg" alt="image" />
+    <img src="~/Content/Client_Image/banner2.jpg" alt="image" />
 </section>
 
 <section class="banner-slider">
@@ -16,16 +42,28 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="~/Content/Client_Image/slider-image1.jpg" alt="First slide">
+                <img src="~/Content/Client_Image/7L9A4780.jpg" alt="First slide">
             </div>
             <div class="item">
-                <img src="~/Content/Client_Image/slider-image2.jpg" alt="Second slide">
+                <img src="~/Content/Client_Image/7L9A4919.jpg" alt="Second slide">
             </div>
             <div class="item">
-                <img src="~/Content/Client_Image/slider-image3.jpg" alt="Third slide">
+                <img src="~/Content/Client_Image/7L9A5065.jpg" alt="Third slide">
+            </div>
+            <div class="item">
+                <img src="~/Content/Client_Image/7L9A5115.jpg" alt="forth slide">
+            </div>
+            <div class="item">
+                <img src="~/Content/Client_Image/7L9A5232.jpg" alt="fifth slide">
+            </div>
+            <div class="item">
+                <img src="~/Content/Client_Image/7L9A5279.jpg" alt="Sixth slide">
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -38,28 +76,137 @@
         </a>
     </div>
 </section>
-
+<input type="hidden" value="0" id="hdLogId" />
 <section class="purchase-form">
     <div class="container">
         <div class="col-sm-6 col-sm-offset-3">
             <h4 class="mb-20">Please fill the purchase form...</h4>
-            <form>
+            @using (Html.BeginForm("SavePurchaseOrder", "Home", FormMethod.Post, new { @id = "purchaseForm" }))
+            {
                 <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" placeholder="Name" />
+                    <label class="control-label mandatoryField">Name</label>
+                    @Html.TextBoxFor(m => m.Name, null, new { @class = "form-control", placeholder = "Name" })
+                    @Html.ValidationMessageFor(m => m.Name, null, new { @class = "error text-danger" })
                 </div>
                 <div class="form-group">
-                    <label>Address</label>
-                    <input type="text" class="form-control" placeholder="Address" />
+                    <label class="control-label mandatoryField">Address</label>
+                    @Html.TextAreaFor(m => m.Address, new { @class = "form-control", placeholder = "Address", rows = 2 })
+                    @Html.ValidationMessageFor(m => m.Address, null, new { @class = "error text-danger" })
                 </div>
                 <div class="form-group">
-                    <label>Delivery Address</label>
-                    <input type="text" class="form-control" placeholder="Delivery Address" />
+                    <label class="control-label mandatoryField">Delivery Address</label>
+                    @Html.TextAreaFor(m => m.DeliveryAddress, new { @class = "form-control", placeholder = "Delivery Address", rows = 2 })
+                    @Html.ValidationMessageFor(m => m.DeliveryAddress, null, new { @class = "error text-danger" })
                 </div>
                 <div class="form-group text-right">
-                    <button class="btn btn-primary btn-lg">Purchase Now</button>
+                    <button class="btn btn-primary btn-lg" id="btnPayNow" type="submit">Purchase Now</button>
                 </div>
-            </form>
+            }
         </div>
     </div>
 </section>
+
+
+<script type="text/javascript">
+    function GetMachineIPAddress() {
+        var ipAddress = "";
+        $.getJSON("https://api.ipify.org/?format=json", function (e) {
+            ipAddress = e.ip;
+            SaveHeaderInformation(ipAddress);
+        });
+    }
+
+    function SaveHeaderInformation(ipAddress) {
+        $.ajax(
+            {
+                url: '@Url.Action("SaveHeaderInformation", "Home")',
+                data: { "Referrer": window.document.referrer, "IPAddress": ipAddress },
+                success: function (data) {
+                    $('#hdLogId').val(data);
+                }
+            });
+    }
+
+    function UpdateFillOutFlag() {
+        $.ajax(
+           {
+               url: '@Url.Action("UpdateFillOutFlag", ControllerHelper.Home)',
+               data: { "LogId": $('#hdLogId').val() },
+               success: function (data) {
+               }
+           });
+    }
+
+    function UpdatePaymentFlag() {
+        $.ajax(
+           {
+               url: '@Url.Action("UpdatePaymentFlag", ControllerHelper.Home)',
+               data: { "LogId": $('#hdLogId').val() },
+               success: function (data) {
+
+               }
+           });
+    }
+
+    function savePurchaseOrder() {
+        toastr.options = {
+            positionClass: 'toast-bottom-right'
+        };
+        $.ajax(
+           {
+               url: '@Url.Action("SavePurchaseOrder",ControllerHelper.Home)',
+               data: { "Name": $('#Name').val(), "Address": $('#Address').val(), "DeliveryAddress": $('#DeliveryAddress').val() },
+               async: false,
+               type: 'POST',
+               success: function (data) {
+                   ClearControll();
+                   toastr.success('Purchase order Successfully.');
+               }
+           });
+    }
+
+    function UpdateVisitedEndTime() {
+        $.ajax(
+     {
+         url: '@Url.Action("UpdateVisitedEndTime", "Home")',
+         data: { "LogId": $('#hdLogId').val() },
+         async: false,
+         success: function (data) {
+         }
+     });
+    }
+
+    function ClearControll() {
+        $("#Name").val('');
+        $("#Address").val('');
+        $("#DeliveryAddress").val('');
+    }
+
+    $('#Name').keyup(function () {
+        var name = $(this).val();
+        if (name.length == 1) {
+            UpdateFillOutFlag();
+        }
+    });
+
+    $('#btnPayNow').click(function (e) {
+        if ($('#purchaseForm').valid()) {
+            UpdatePaymentFlag();
+            savePurchaseOrder();
+            $('.form-control').removeClass('error');
+            $('.form-control').removeClass('required');
+            e.preventDefault();
+        }
+    });
+
+    $(document).ready(function () {
+        GetMachineIPAddress();
+    });
+
+
+    window.addEventListener("beforeunload", function (e) {
+        UpdateVisitedEndTime();
+        return null;
+    });
+
+</script>

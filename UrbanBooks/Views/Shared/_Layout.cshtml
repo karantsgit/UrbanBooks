@@ -11,11 +11,20 @@
     <link rel="shortcut icon" href="~/favicon.ico" />
     @Styles.Render("~/bundles/Client-css")
     @Scripts.Render("~/bundles/Client-Script")
-    @*<style type="text/css">
-            .clsFooter {
-                background-color: #f8f8f8;
-            }
-        </style>*@
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <style>
+        .back-to-top {
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-static-top">
@@ -34,6 +43,11 @@
                     <li class="active"><a href="#">HOME</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Contact Us</a></li>
+                    <li style="padding-top:8px;">
+                        @{
+                            Html.RenderAction("GetLanguageList", "Common");
+                        }
+                    </li>
                 </ul>
             </div>
         </div>
@@ -42,9 +56,28 @@
         <div class="body-content">
             @RenderBody()
         </div>
-        <div class="footer text-muted" style="text-align:center">
+        <footer>
             © @DateTime.Now.Year. Urban Books. All Rights Reserved.
-        </div>
+        </footer>
     </div>
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up" style="color: white;"></span></a>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        $('#back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+
+</script>

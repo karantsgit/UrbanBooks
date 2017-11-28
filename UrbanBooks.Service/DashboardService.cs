@@ -72,5 +72,18 @@ namespace UrbanBooks.Service
                  ).FirstOrDefault();
             return Result;
         }
+
+        public int SavePurchaseOrder(PurchaseModel model)
+        {
+            int Result = 0;
+            GenericRepository<HeaderInformationModel> objGenericRepository = new GenericRepository<HeaderInformationModel>();
+
+            Result = objGenericRepository.ExecuteSQL<int>("sp_SavePurchaseOrder @Name,@Address,@DeliveryAddress",
+                 Utility.GetSQLParam("Name", SqlDbType.VarChar, !string.IsNullOrWhiteSpace(model.Name) ? model.Name : (object)DBNull.Value),
+                 Utility.GetSQLParam("Address", SqlDbType.VarChar, !string.IsNullOrWhiteSpace(model.Address) ? model.Address: (object)DBNull.Value),
+                 Utility.GetSQLParam("DeliveryAddress", SqlDbType.VarChar, !string.IsNullOrWhiteSpace(model.DeliveryAddress) ? model.DeliveryAddress : (object)DBNull.Value)
+                 ).FirstOrDefault();
+            return Result;
+        }
     }
 }

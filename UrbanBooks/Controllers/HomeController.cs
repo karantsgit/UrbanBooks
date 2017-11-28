@@ -32,5 +32,62 @@ namespace UrbanBooks.Web.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult ValidateCommand(string product = "Test Product", string totalPrice = "200", string quantity = "2")
+        {
+            bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["IsSandbox"]);
+            var paypal = new PayPalModel(useSandbox);
+
+            paypal.item_name = product;
+            paypal.amount = totalPrice;
+            paypal.item_quantity = quantity;
+            return View(paypal);
+        }
+
+        public ActionResult RedirectFromPaypal()
+        {
+            return View();
+        }
+
+        public ActionResult CancelFromPaypal()
+        {
+            return View();
+        }
+
+        public ActionResult NotifyFromPaypal()
+        {
+            return View();
+        }
+
+        public ActionResult SaveHeaderInformation(HeaderInformationModel model)
+        {
+            var success = service.SaveHeaderInformation(model);
+            return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UpdateFillOutFlag(int LogId)
+        {
+            var success = service.UpdateFillOutFlag(LogId);
+            return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UpdatePaymentFlag(int LogId)
+        {
+            var success = service.UpdatePaymentFlag(LogId);
+            return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
+
+        public ActionResult UpdateVisitedEndTime(int LogId)
+        {
+            var success = service.UpdateVisitedEndTime(LogId);
+            return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult SavePurchaseOrder(PurchaseModel model)
+        {
+            var success = service.SavePurchaseOrder(model);
+            return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

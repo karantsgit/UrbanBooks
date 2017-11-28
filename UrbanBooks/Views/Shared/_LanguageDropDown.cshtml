@@ -2,4 +2,4 @@
 @model List<UrbanBooks.Entity.LanguageModel>
 
 
-@Html.DropDownList("SelectedLanguageId", new SelectList(Model, "LanguageCode", "LanguageName", SessionHelper.SelectedLanguage), new { autopostback = "true" })
+@Html.DropDownList("SelectedLanguageId", new SelectList(Model, "LanguageCode", "LanguageName", SessionHelper.SelectedLanguage), new { autopostback = "true", @class = "form-control" })
