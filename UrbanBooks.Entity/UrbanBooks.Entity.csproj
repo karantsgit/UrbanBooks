@@ -44,7 +44,9 @@
   <ItemGroup>
     <Compile Include="HeaderInformationModel.cs" />
     <Compile Include="LanguageModel.cs" />
+    <Compile Include="PaypalModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
