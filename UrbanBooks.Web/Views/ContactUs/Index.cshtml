@@ -1,0 +1,108 @@
+﻿@model UrbanBooks.Entity.ContactUsModel
+@using UrbanBooks.Common
+@using UrbanBooks.Web;
+@using System.Web.Mvc;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    .carousel-inner img {
+        display: block;
+        max-width: 230px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+    }
+
+    .error span {
+        color: red;
+    }
+
+    .mandatoryField:after {
+        content: "*";
+        color: red;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+</style>
+
+@*<section class="tagline-image">
+    <img src="~/Content/Client_Image/banner2.jpg" alt="image" />
+</section>*@
+<section class="purchase-form">
+   
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="mb-20 fontheader">Contact Us...</div>
+            @using (Html.BeginForm("SaveContactUsDetails", "ContactUs", FormMethod.Post, new { @id = "FormContactUs" }))
+            {
+                @Html.HiddenFor(x => x.LanguageId)
+                <div class="form-group">
+                    <label class="control-label mandatoryField">@Utility.GetResourceValue("lblName")</label>
+                    @Html.TextBoxFor(m => m.Name, null, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblName"), tabindex = 1 })
+                    @Html.ValidationMessageFor(m => m.Name, null, new { @class = "error text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label mandatoryField">@Utility.GetResourceValue("lblEmail")</label>
+                    @Html.TextBoxFor(m => m.Email, null, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblEmail"), tabindex = 2 })
+                    @Html.ValidationMessageFor(m => m.Email, null, new { @class = "error text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label mandatoryField">@Utility.GetResourceValue("lblMessage")</label>
+                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblMessage"), rows = 3, tabindex = 3 })
+                    @Html.ValidationMessageFor(m => m.Message, null, new { @class = "error text-danger" })
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary btn-lg" id="btnSendMessage" type="submit">Send Message</button>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+
+    $('#btnSendMessage').click(function (e) {
+        if ($('#FormContactUs').valid()) {
+            saveContactDetails();
+            $('.form-control').removeClass('error');
+            $('.form-control').removeClass('required');
+            e.preventDefault();
+        }
+    });
+
+    function saveContactDetails() {
+        toastr.options = {
+            positionClass: 'toast-bottom-right'
+        };
+        $("#LanguageId").val($("#SelectedLanguageId").val());
+        var formdata = $('form').serialize();
+        $.ajax(
+           {
+               url: '@Url.Action("SaveContactDetail",ControllerHelper.ContactUs)',
+               async: false,
+               type: 'POST',
+               data: formdata,
+               success: function (data) {
+                   ClearControll();
+                   if (data == '') {
+                       toastr.success('Send message Successfully.');
+                   }
+                   else {
+                       toastr.success(data);
+                   }
+               }
+           });
+    }
+
+    function ClearControll() {
+        $("#Name").val('');
+        $("#Email").val('');
+        $("#Message").val('');
+    }
+</script>

@@ -1,0 +1,127 @@
+﻿@using UrbanBooks.Common;
+@using UrbanBooks.Entity;
+@using UrbanBooks.Web.Resource;
+
+@model UrbanBooks.Entity.FAQModel
+@{
+    Layout = null;
+}
+
+@Html.Partial("_Notification")
+@using (Html.BeginForm("SaveFAQ", ControllerHelper.FAQ, FormMethod.Post, new { @id = "formFAQ" }))
+{
+    @Html.HiddenFor(x => x.FAQId)
+
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.QuestionId)</label>
+            <div class="col-lg-9">
+                @Html.DropDownListFor(m => m.QuestionId, new SelectList((IEnumerable<SelectListItem>)ViewBag.QuestionList, "Value", "Text"), CommonHelper.PleaseSelect, new { @class = "form-control", @maxlength = "100", @style = "height:40px", @tabindex = "1" })
+                    @Html.ValidationMessageFor(m => m.QuestionId, null, new { Styles = "position: initial;" })
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.LanguageId)</label>
+            <div class="col-lg-9">
+                @Html.DropDownListFor(m => m.LanguageId, new SelectList((IEnumerable<SelectListItem>)ViewBag.LanguageList, "Value", "Text"), CommonHelper.PleaseSelect, new { @class = "form-control", @maxlength = "100", @style = "height:40px", @tabindex = "2" })
+                @Html.ValidationMessageFor(m => m.LanguageId)
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.Answer)</label>
+            <div class="col-lg-9">
+                @Html.TextBoxFor(m => m.Answer, new { @class = "k-textbox", @maxlength = "100", @style = "height:40px", @tabindex = "3" })
+                @Html.ValidationMessageFor(m => m.Answer)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9" style="text-align:right !important">
+                <button class="btn btn-primary mr-5" id="btnSaveFAQ" type="button">Submit</button>
+                @*<input type="button" class="btn btn-primary mr-5" value="Submit" onclick="return SaveFAQDetails();">*@
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Close">
+            </div>
+        </div>
+    </div>
+}
+<script>
+
+    $('#btnSaveFAQ').click(function (e) {
+        if ($.validator.unobtrusive != undefined) {
+            $.validator.unobtrusive.parse("form");
+        }
+        if ($('#formFAQ').valid()) {
+            var formdata = $('form').serialize();
+            $.ajax({
+                url: '@Url.Action("SaveFAQ", ControllerHelper.FAQ)',
+                async: false,
+                type: 'POST',
+                data: formdata,
+                success: function (data) {
+                    if (data == '') {
+                        GetJsaRecord();
+                        showNotification('FAQ Saved Successfully.', '@Enums.NotifyType.SuccessMessage.GetHashCode()');
+                        $('#myFAQModal').modal('toggle');
+                    }
+                    else {
+                        showNotification(data, '@Enums.NotifyType.ErrorMessage.GetHashCode()');
+                    }
+                }
+            });
+        }
+    })
+
+
+    @*function SaveFAQDetails() {
+        var QuestionId = $('#QuestionId').val();
+        var LanguageId = $('#LanguageId').val();
+        var Answer = $('#Answer').val();
+
+        $('#valQuestionId').remove();
+        $('#valLanguageId').remove();
+        $('#valAnswer').remove();
+
+        var Status = true;
+        if (QuestionId == 'undefined' || QuestionId == null || QuestionId == '') {
+            Status = false;
+            $('#QuestionId').after('<div style="position:inherit;"><span role="alert" id="valQuestionId" style="padding-bottom:0px;padding-top:0px" data-valmsg-for="files" data-for="files" class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error"><span class="k-icon k-warning"> </span>@Message.QuestionRequired</span></div>');
+        }
+        if (LanguageId == 'undefined' || LanguageId == null || LanguageId == '') {
+            Status = false;
+            $('#LanguageId').after('<div style="position:inherit;"><span role="alert" id="valLanguageId" style="padding-bottom:0px;padding-top:0px" data-valmsg-for="files" data-for="files" class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error"><span class="k-icon k-warning"> </span>@Message.QuestionRequired</span></div>');
+        }
+        if (Answer == 'undefined' || Answer == null || Answer == '') {
+            Status = false;
+            $('#Answer').after('<div style="position:inherit;"><span role="alert" id="valAnswer" style="padding-bottom:0px;padding-top:0px" data-valmsg-for="files" data-for="files" class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error"><span class="k-icon k-warning"> </span>@Message.QuestionRequired</span></div>');
+        }
+        if (Status == true) {
+            var formdata = $('form').serialize();
+            $.ajax({
+                url: '@Url.Action("SaveFAQ", ControllerHelper.FAQ)',
+                async: false,
+                type: 'POST',
+                data: formdata,
+                success: function (data) {
+                    if (data == '') {
+                        GetJsaRecord();
+                        showNotification('FAQ Saved Successfully.', '@Enums.NotifyType.SuccessMessage.GetHashCode()');
+                        $('#myFAQModal').modal('toggle');
+                    }
+                    else {
+                        alert(3333333);
+                        showNotification(data, '@Enums.NotifyType.ErrorMessage.GetHashCode()');
+                    }
+                }
+            });
+        }
+    }*@
+</script>
+
+

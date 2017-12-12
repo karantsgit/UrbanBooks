@@ -1,0 +1,55 @@
+﻿@using UrbanBooks.Common;
+@model string[]
+
+<div class="page-header">
+    <div class="page-header-content">
+        <div class="page-title">
+            @if (Model.Count() > 2)
+            {
+                <h4><a id="btnBack"><i class="icon-arrow-left52 position-left"></i></a>@Model[2]</h4>
+            }
+            else if (Model.Count() > 1)
+            {
+                <h4><a id="btnBack"><i class="icon-arrow-left52 position-left"></i></a>@Model[1]</h4>
+            }
+        </div>
+
+    </div>
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Dashboard")"><i class="icon-home2 position-left"></i>@Model[0]</a></li>
+            @if (Model.Count() > 1)
+            {
+                <li>@Model[1]</li>
+            }
+            @if (Model.Count() > 2)
+            {
+                <li class="active">@Model[2]</li>
+            }
+        </ul>
+    </div>
+</div>
+<script>
+    $('#btnBack').click(function () {
+        window.history.back();
+    });
+
+    function returnToHome()
+    {
+        window.location.href = '@Url.Action("Index", "Dashboard")';
+    }
+
+    function goBack()
+    {
+        window.history.back();
+    }
+
+    function onError(e, status) {
+        if (e.status == "customerror") {
+            bootbox.alert(e.errors);
+        }
+        else {
+            bootbox.alert('@Message.SystemErrorOccurred');
+        }
+    }
+</script>

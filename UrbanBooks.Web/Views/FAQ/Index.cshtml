@@ -1,0 +1,127 @@
+﻿@using UrbanBooks.Entity
+@using UrbanBooks.Common
+@using UrbanBooks.Web;
+@using System.Web.Mvc;
+@model UrbanBooks.Entity.FAQCLientModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    .carousel-inner img {
+        display: block;
+        max-width: 230px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+    }
+
+    .error span {
+        color: red;
+    }
+
+    .mandatoryField:after {
+        content: "*";
+        color: red;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+</style>
+
+@*<section class="tagline-image">
+    <img src="~/Content/Client_Image/banner2.jpg" alt="image" />
+</section>*@
+<div class="purchase-form">
+    <div class="container">
+        <div class="mb-20 fontheader">Frequently Asked Questions...</div>
+        @*<div class="col-sm-12 pb-20">
+            <div class="col-sm-10" style="padding-left:50px !important">
+                @Html.TextBox("txtSearch", null, new { @class = "form-control", placeholder = "Search...", Style = "height: 44px !important;" })
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-primary btn-lg" id="btnSearch" type="submit">Search</button>
+            </div>
+        </div>*@
+        <div class="col-sm-12">
+            <div class="panel-group" id="accordion">
+                @foreach (FAQModel item in @Model.FAQList)
+                {
+                    string Ancherhref = "#collapse" + @item.FAQId;
+                    string divId = "collapse" + @item.FAQId;
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href=@Ancherhref>&bull; @item.Question</a>
+                            </div>
+                        </div>
+                        <div id=@divId class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @item.Answer
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function GetJsaRecord() {
+        $.ajax({
+            url: encodeURI('@Url.Action("GetFAQList", ControllerHelper.FAQClient)'),
+            type: "GET",
+            data: { LanguageId: $('#SelectedLanguageId').val() },
+            dataType: "json",
+            success: function (data) {
+
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        //GetJsaRecord();
+    });
+
+    $('#btnSendMessage').click(function (e) {
+        if ($('#FormContactUs').valid()) {
+            saveContactDetails();
+            $('.form-control').removeClass('error');
+            $('.form-control').removeClass('required');
+            e.preventDefault();
+        }
+    });
+
+    function saveContactDetails() {
+        toastr.options = {
+            positionClass: 'toast-bottom-right'
+        };
+        $("#LanguageId").val($("#SelectedLanguageId").val());
+        var formdata = $('form').serialize();
+        $.ajax(
+           {
+               url: '@Url.Action("SaveContactDetail",ControllerHelper.ContactUs)',
+               async: false,
+               type: 'POST',
+               data: formdata,
+               success: function (data) {
+                   ClearControll();
+                   if (data == '') {
+                       toastr.success('Send message Successfully.');
+                   }
+                   else {
+                       toastr.success(data);
+                   }
+               }
+           });
+    }
+
+    function ClearControll() {
+        $("#Name").val('');
+        $("#Email").val('');
+        $("#Message").val('');
+    }
+</script>

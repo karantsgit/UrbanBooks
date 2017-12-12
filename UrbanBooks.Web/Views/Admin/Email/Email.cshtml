@@ -1,0 +1,182 @@
+﻿@using UrbanBooks.Common
+@using UrbanBooks.Web.Resource
+@using UrbanBooks.Common
+@{
+    Html.RenderPartial("_PageHeader", new string[] { "Dashboard", "Master", "Email Master" });
+}
+<div class="content">
+    @Html.Partial("_Notification")
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel-group panel-group-control panel-group-control-right">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h6 class="panel-title">
+                            <a class="wd-full" data-toggle="collapse" href="#SearchPanel">
+                                <i class="icon-search4 position-left"></i> <b class="text-bold pt-0" style="text-transform:uppercase;">@Label.Search</b>
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="SearchPanel" class="panel-collapse collapse in">
+                        <div class="panel-body" style="padding:20px 10px;">
+                            <div class="col-lg-12">
+                                <div class="col-lg-4">
+                                    <label for="Name" class="col-lg-3" style="margin-top:8px;">Language</label>
+                                    <div class="col-lg-9">
+                                        @Html.DropDownList("ddlLanguage", new SelectList((IEnumerable<SelectListItem>)ViewBag.LanguageList, "Value", "Text"), CommonHelper.PleaseSelect, new { @class = "form-control", @maxlength = "100", @style = "height:40px", @tabindex = "1" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <input type="submit" value="@Label.Search" id="btnSearch" class="btn btn-primary  mr-5" onclick="SearchClick()" tabindex="2" />
+                                    <input type="button" value="@Label.Reset" class="btn btn-default mr-5" onclick="ResetClick()" tabindex="3" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-flat">
+        <div class="panel-body">
+            <fieldset>
+                <legend class="text-bold pt-0">
+                    <i class="icon-list position-left"></i>@Label.Email List
+                </legend>
+
+                <div class="k-widget k-grid" id="ContactSourceGrid" data-role="grid">
+                    <div class="k-header k-grid-toolbar k-grid-top">
+                        <a class="k-button k-button-icontext" onclick="OpenEmailMasterPopUp(0)" data-toggle="modal" data-target="#myEmailModal"><span class="k-icon k-add"></span>Add @Label.Email</a>
+                    </div>
+
+                    <table id="tblFeeConfig" class="display" cellspacing="0" width="100%">
+                        <thead class="k-grid-header">
+                            <tr>
+                                <th class="k-header" width="45%">Language</th>
+                                <th class="k-header" width="45%">Email</th>
+                                <th class="k-header" width="10%" style="text-align:center">Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myEmailModal" role="dialog" style=" top: 15% !important">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add/Edit @Label.Email</h4>
+            </div>
+            <div class="modal-body" style="max-height: none !important;">
+                <div id="idEmail">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function GetJsaRecord() {
+        $.ajax({
+            url: encodeURI('@Url.Action("GetEmailMasterList", ControllerHelper.Email)'),
+            type: "GET",
+            dataType: "json",
+            data: {Language: $('#ddlLanguage').val() },
+            success: function (data) {
+                mySuccHandler(data)
+            },
+            error: myErrHandler
+        });
+    }
+    function mySuccHandler(data) {
+        try {
+            var dataTableExample = $('#tblFeeConfig').DataTable();
+            if (dataTableExample != 'undefined') {
+                dataTableExample.destroy();
+            }
+
+            dataTableExample = $('#tblFeeConfig').DataTable({
+                "order": [[0, "desc"]],
+                "dom": 'frtlip',
+                "aaData": data,
+                "bFilter": false,
+                "aoColumns": [{
+                    "mData": "LanguageName"
+                },
+                {
+                    "mData": "Email"
+                },
+               {
+                   "mData": "EmailId",
+                   "sortable": false,
+                   "className": "dt-center",
+                   "render": function (mData) {
+                       var result = '';
+                       result = result + '<a onclick="OpenEmailMasterPopUp(' + mData + ')" data-toggle="modal" data-target="#myEmailModal" class="k-button" href="#" data-toggle="tooltip" title="Edit"><span class="k-icon k-edit"></span></a> &nbsp';
+                       result = result + '<a id="lnkDelete" onclick="DeleteModel(' + mData + ')" href="#"  class="k-button" data-toggle="tooltip" title="Delete"><span class="k-icon k-delete"></span></a>';
+                       return result;
+                   }
+               }
+                ]
+            });
+            $(".dataTables_length").css('clear', 'none');
+            $(".dataTables_length").css('margin-right', '20px');
+            $(".dataTables_info").css('clear', 'none');
+            $(".dataTables_info").css('padding', '0');
+        } catch (e) {
+            alert(e.message);
+        }
+    }
+
+    function myErrHandler(sender, args) {
+        alert(args);
+    }
+
+    $(document).ready(function () {
+        GetJsaRecord();
+    });
+    function OpenEmailMasterPopUp(id) {
+        $.ajax({
+            url: '@Url.Action("OpenEmailMasterPopUp", ControllerHelper.Email)',
+            async: false,
+            type: 'POST',
+            data: { EmailId: id },
+            success: function (data) {
+                $('#idEmail').html(data);
+            }
+        });
+    }
+    function DeleteModel(id) {
+        bootbox.confirm("Are you sure want to delete this Email?", function (result) {
+            if (result) {
+                $.ajax({
+                    url: '@Url.Action("DeleteEmailMaster", ControllerHelper.Email)',
+                    async: false,
+                    type: 'POST',
+                    data: { EmailId: id },
+                    success: function (data) {
+                        if (data == '') {
+                            GetJsaRecord();
+                            showNotification('Email Deleted successfully.', '@Enums.NotifyType.SuccessMessage.GetHashCode()');
+                        }
+                        else {
+                            alert(234);
+                            showNotification(data.Flag, '@Enums.NotifyType.ErrorMessage.GetHashCode()');
+                        }
+                    }
+                });
+            }
+        });
+    }
+    function ResetClick() {
+        $("#ddlLanguage").val('');
+        GetJsaRecord();
+    }
+    function SearchClick() {
+        GetJsaRecord();
+    }
+</script>
