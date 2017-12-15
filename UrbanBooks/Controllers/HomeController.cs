@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -87,6 +88,12 @@ namespace UrbanBooks.Web.Controllers
         {
             var success = service.SavePurchaseOrder(model);
             return Json(success, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult BannerSlider()
+        {
+            List<string> filenames = Directory.EnumerateFiles(Server.MapPath("~/Content/Client_Image/BannerSlider")).Select(s => Path.GetFileName(s)).ToList();
+            return PartialView(filenames);
         }
 
     }
