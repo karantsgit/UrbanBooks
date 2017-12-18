@@ -91,25 +91,21 @@ namespace UrbanBooks.Web.Controllers
             return Json(success, JsonRequestBehavior.AllowGet);
         }
 
-<<<<<<< HEAD:UrbanBooks/Controllers/HomeController.cs
         public ActionResult BannerSlider()
         {
             List<string> filenames = Directory.EnumerateFiles(Server.MapPath("~/Content/Client_Image/BannerSlider")).Select(s => Path.GetFileName(s)).ToList();
             return PartialView(filenames);
         }
 
-=======
         public ActionResult ChangeLanguageCookies(string LanguageId)
         {
             SessionHelper.SetCurrentLanguage(LanguageId);
             return Json("Success", JsonRequestBehavior.AllowGet);
         }
 
-
         public ActionResult OpenPrivacyPopUp()
         {
             return View(ViewHelper.TermsAndCondition);
         }
->>>>>>> 8699a65a976fe0e6169b74ba68fc4dc03456e87a:UrbanBooks.Web/Controllers/HomeController.cs
     }
 }
