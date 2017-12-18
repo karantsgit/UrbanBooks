@@ -1,0 +1,157 @@
+﻿@using UrbanBooks.Common
+@using System.Web.Optimization;
+@using System.Web.Mvc;
+
+<!DOCTYPE html>
+<style>
+    .modal-body {
+        max-height: 600px;
+        /*display: none;*/
+        Overflow-y: auto;
+        Overflow-x: hidden;
+    }
+
+        .modal-body::-webkit-scrollbar {
+            width: 7px;
+            background-color: #F5F5F5;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background-color: #337ab7;
+        }
+
+    .PopupLink {
+        cursor: pointer;
+        color: #337ab7 !important;
+        text-decoration:none;
+    }
+    .extralink a:hover{
+        color: #2e6da4 !important;
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Books</title>
+    <link rel="shortcut icon" href="~/Images/open-book.png" />
+    @*<img src="~/Images/open-book.png" />*@
+    @Styles.Render("~/bundles/Client-css")
+    @Scripts.Render("~/bundles/Client-Script")
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <style>
+        .back-to-top {
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top hidden-xs">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="~/Images/logo.jpg" alt="Urban Books" width="250" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="@Url.Action("Index",ControllerHelper.Home)">Home</a></li>
+                    <li><a href="@Url.Action("Index",ControllerHelper.FAQClient)">FAQ</a></li>
+                    <li><a href="@Url.Action("Index",ControllerHelper.ContactUs)">Contact Us</a></li>
+                    <li>
+                        @{
+                            Html.RenderAction("GetLanguageList", "Common");
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="tagline-image">
+        <div class="container">
+            <img src="~/Content/Client_Image/banner2.jpg" alt="image" />
+        </div>
+    </section>
+    <div class="content-wrapper">
+        <div class="body-content">
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="extralink">
+                © @DateTime.Now.Year. Urban Books. All Rights Reserved.&nbsp;&nbsp;<a onclick="OpenPrivacyPopUp();" data-target="#myPrivacyModal" data-toggle="modal" class="PopupLink">Terms & Condition</a>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" id="myPrivacyModal" role="dialog" style="top: 10% !important;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#337ab7;">Terms And Condition </h4>
+                </div>
+                <div class="modal-body" style="height: 500px !important;overflow-y: scroll !important;overflow-x: hidden !important;">
+                    <div id="idPrivacy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up" style="color: white;"></span></a>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        $('#back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $('ul.nav.navbar-nav').find('a[href="' + location.pathname + '"]')
+        .closest('li').addClass('active').siblings().removeClass('active');
+    });
+  
+    $('#SelectedLanguageId').change(function () {
+        $.ajax(
+            {
+                url: '@Url.Action("ChangeLanguageCookies", ControllerHelper.Home)',
+                data: { "LanguageId": $('#SelectedLanguageId').val() },
+                success: function (data) {
+                    window.location.reload();
+                }
+            });
+    });
+
+
+    function OpenPrivacyPopUp() {
+        $.ajax({
+            url: '@Url.Action("OpenPrivacyPopUp", ControllerHelper.Home)',
+            async: false,
+            type: 'POST',
+            success: function (data) {
+                $('#idPrivacy').html(data);
+            }
+        });
+    }
+</script>

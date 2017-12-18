@@ -11,6 +11,11 @@ namespace UrbanBooks.Common
         public const string Login = "Login";
         public const string Home = "Home";
         public const string Dashboard = "Dashboard";
-        public const string FAQ = "FAQ";
+        public const string FAQ = "FAQMaster";
+        public const string Email = "Email";
+        public const string ContactUs = "ContactUs";
+        public const string FAQClient = "FAQ";
+        public const string LabelResource = "LabelResource";
+        public const string Log = "Log";
     }
 }

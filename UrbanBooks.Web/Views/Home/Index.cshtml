@@ -1,0 +1,354 @@
+﻿@model UrbanBooks.Entity.PurchaseModel
+@using UrbanBooks.Common
+@using UrbanBooks.Web;
+@using System.Web.Mvc;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style type="text/css">
+    .carousel-inner img {
+        display: block;
+        max-width: 230px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+    }
+
+    .error span {
+        color: red;
+    }
+
+    .mandatoryField:after {
+        content: "*";
+        color: red;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    
+
+    .homefont {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .BannerLabel {
+        display: inline-block;
+        width: auto;
+        border: solid 2px #000;
+        padding: 15px 10px;
+        border-radius: 10px;
+        width: 220px;
+    }
+
+    .BannerLabelP1 {
+        float: left;
+        font-size: 15px;
+        line-height: 20px;
+        min-height: 35px;
+        width: 130px;
+    }
+
+    .BannerLabelP2 {
+        float: left;
+        font-size: 30px;
+        line-height: 35px;
+        width: 60px;
+    }
+</style>
+
+
+<div class="container">
+    <div class="pb-20 homefont">
+        Purchase a copy of the URBANBOOKS SYDNEY INNERWEST, which is only $19.95 (eBook) or $26.95 (hard copy) and go into the draw for a chance to WIN A LUXURYBRAND NEW 5 BEDROOM HOME IN SYDNEY. Don’t miss out!
+    </div>
+    <div class="col-sm-12 mb-10">
+        <div class="row">
+            <div class="col-sm-6 text-center mb-10">
+                <div class="BannerLabel">
+                    <p class="BannerLabelP1">Buy the eBook now and WIN!</p>
+                    <span class="BannerLabelP2">$19</span>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center mb-10">
+                <div class="BannerLabel">
+                    <p class="BannerLabelP1">Buy the hard book now and WIN!</p>
+                    <span class="BannerLabelP2">$26</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pb-20 fontheader">
+        About the book
+    </div>
+    <div class="pb-20 homefont">
+        1.The URBANBOOKS SYDNEY takes a fresh style tophotographing some of Sydney’s iconic suburbs of the inner west, while includingsome usual Sydney icons we are renowned for.It is a down to earth approach photographing “the urban jungle’ ofSydney.With the launch of the firstedition INNER WEST, which is only $22.95, go into the draw to WIN A BRAND NEW 5BEDROOM HOME IN SYDNEY - only 21kms from the CBD!To take part in this once in a lifetimeopportunity and so you do not miss out please visit our website at urban.
+    </div>
+</div>
+<section class="banner-slider pb-20">
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/Content/Client_Image/7L9A4780.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="~/Content/Client_Image/7L9A4919.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="~/Content/Client_Image/7L9A5065.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="~/Content/Client_Image/7L9A5115.jpg" alt="forth slide">
+                </div>
+                <div class="item">
+                    <img src="~/Content/Client_Image/7L9A5232.jpg" alt="fifth slide">
+                </div>
+                <div class="item">
+                    <img src="~/Content/Client_Image/7L9A5279.jpg" alt="Sixth slide">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="pb-20 fontheader" style="text-align:center">
+        WIN THIS BRAND NEW HOME IN SYDNEY AUSTRALIA
+    </div>
+    <div class="pb-20" style="text-align:center">This is your chance to win this brand new luxury home in a peaceful local community on the river just over 20 kilometres from Sydney's CBD.</div>
+    <div class="pb-20">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_8.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_2.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_3.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_4.jpeg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_6.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_7.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_10.jpeg" />
+                    </div>
+                    <div class="col-sm-3 mb-10 text-center">
+                        <img src="~/Images/Benner_9.jpeg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pb-20 control-label homefont">
+        Description of Prize
+    </div>
+    <div class="pb-20 homefont">
+        THE ULTIMATE URBAN DREAM HOME
+    </div>
+    <div class="pb-20 homefont">
+        Defined by an impressive attention to detail, this brand newhome (to be completed by August 2018) represents a sleek fusion of contemporaryform and function in a sought-after waterside locale only 21 kilometres fromthe Sydney CBD. Setting the latest benchmark for designer living, this brandnew home offers outstanding quality in an ideal location for families. It'sjust footsteps to the riverside reserve, all major roads including the M5 thattakes you directly to the city, and directly opposite the Georges RiverNational Park.
+    </div>
+    <div class="col-sm-12 homefont">
+        - Massive proportions enhance every indoor andoutdoor space
+    </div>
+    <div class="col-sm-12 homefont">
+        - Light filled open layout reveals qualitycrafted interiors
+    </div>
+    <div class="col-sm-12 homefont">
+        - Spacious living zones bathed in an abundanceof natural light
+    </div>
+    <div class="col-sm-12 homefont">
+        - Open plan living blends seamlessly intoalfresco entertaining
+    </div>
+    <div class="col-sm-12 homefont">
+        - Kitchen boasts 40mm Caesar stone benchtops andshowcases stainless gas appliances
+    </div>
+    <div class="col-sm-12 homefont">
+        - Well-appointed bedrooms each feature built-insand ensuite to main
+    </div>
+    <div class="col-sm-12 homefont">
+        - Sleek bathrooms has floor-to-ceiling tiles andframeless shower
+    </div>
+    <div class="col-sm-12 homefont">
+        - Ducted air conditioning, tiled living zones,sleek joinery
+    </div>
+    <div class="col-sm-12 homefont">
+        - Single lock-up garage, internal access plusoff street parking
+    </div>
+    <div class="col-sm-12 homefont pb-20">
+        - Easy access to cafes, restaurants, playingfields and shops
+    </div>
+    <div class="homefont">
+        Estimated rental approximately $42,000 per annum.
+    </div>
+</div>
+<input type="hidden" value="0" id="hdLogId" />
+    <section class="purchase-form">
+        <div class="container pb-10 mb-20 pt-10" style="border:2px solid grey;border-radius:10px">
+            <div class="col-sm-12">
+                <div class="mb-20 fontheader" style="text-align:center;">Purchase Now</div>
+                @using (Html.BeginForm("SavePurchaseOrder", "Home", FormMethod.Post, new { @id = "purchaseForm" }))
+                {
+                    <div style="border:2px solid grey;padding:15px;border-radius:10px">
+                        <div class="form-group">
+                            <label class="control-label mandatoryField">@Utility.GetResourceValue("lblName")</label>
+                            @Html.TextBoxFor(m => m.Name, null, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblName") })
+                            @Html.ValidationMessageFor(m => m.Name, null, new { @class = "error text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label mandatoryField">@Utility.GetResourceValue("lblAddress")</label>
+                            @Html.TextAreaFor(m => m.Address, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblAddress"), rows = 2 })
+                            @Html.ValidationMessageFor(m => m.Address, null, new { @class = "error text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label mandatoryField">@Utility.GetResourceValue("lblDeliveryAddress")</label>
+                            @Html.TextAreaFor(m => m.DeliveryAddress, new { @class = "form-control", placeholder = Utility.GetResourceValue("lblDeliveryAddress"), rows = 2 })
+                            @Html.ValidationMessageFor(m => m.DeliveryAddress, null, new { @class = "error text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group text-right pt-10">
+                        <button class="btn btn-primary btn-lg" id="btnPayNow" type="submit">Pay Now</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function GetMachineIPAddress() {
+            var ipAddress = "";
+            $.getJSON("https://api.ipify.org/?format=json", function (e) {
+                ipAddress = e.ip;
+                SaveHeaderInformation(ipAddress);
+            });
+        }
+
+        function SaveHeaderInformation(ipAddress) {
+            $.ajax(
+                {
+                    url: '@Url.Action("SaveHeaderInformation", "Home")',
+                    data: { "Referrer": window.document.referrer, "IPAddress": ipAddress },
+                    success: function (data) {
+                        $('#hdLogId').val(data);
+                    }
+                });
+        }
+
+        function UpdateFillOutFlag() {
+            $.ajax(
+               {
+                   url: '@Url.Action("UpdateFillOutFlag", ControllerHelper.Home)',
+                   data: { "LogId": $('#hdLogId').val() },
+                   success: function (data) {
+                   }
+               });
+        }
+
+        function UpdatePaymentFlag() {
+            $.ajax(
+               {
+                   url: '@Url.Action("UpdatePaymentFlag", ControllerHelper.Home)',
+                   data: { "LogId": $('#hdLogId').val() },
+                   success: function (data) {
+                   }
+               });
+        }
+
+        function savePurchaseOrder() {
+            toastr.options = {
+                positionClass: 'toast-bottom-right'
+            };
+            $.ajax(
+               {
+                   url: '@Url.Action("SavePurchaseOrder",ControllerHelper.Home)',
+                   data: { "Name": $('#Name').val(), "Address": $('#Address').val(), "DeliveryAddress": $('#DeliveryAddress').val() },
+                   async: false,
+                   type: 'POST',
+                   success: function (data) {
+                       ClearControll();
+                       toastr.success('Purchase order Successfully.');
+                   }
+               });
+        }
+
+        function UpdateVisitedEndTime() {
+            $.ajax(
+         {
+             url: '@Url.Action("UpdateVisitedEndTime", "Home")',
+             data: { "LogId": $('#hdLogId').val() },
+             async: false,
+             success: function (data) {
+             }
+         });
+        }
+
+        function ClearControll() {
+            $("#Name").val('');
+            $("#Address").val('');
+            $("#DeliveryAddress").val('');
+        }
+
+        $('#Name').keyup(function () {
+            var name = $(this).val();
+            if (name.length >= 1) {
+                UpdateFillOutFlag();
+            }
+        });
+
+        $('#btnPayNow').click(function (e) {
+            if ($('#purchaseForm').valid()) {
+                UpdatePaymentFlag();
+                savePurchaseOrder();
+                $('.form-control').removeClass('error');
+                $('.form-control').removeClass('required');
+                e.preventDefault();
+            }
+        });
+
+        $(document).ready(function () {
+            GetMachineIPAddress();
+        });
+
+
+        window.addEventListener("beforeunload", function (e) {
+            UpdateVisitedEndTime();
+            return null;
+        });
+
+    </script>

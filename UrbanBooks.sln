@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Web", "UrbanBooks\UrbanBooks.Web.csproj", "{628DB26B-7771-4496-A175-73AD3FBE320A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Common", "UrbanBooks.Common\UrbanBooks.Common.csproj", "{719C615C-54C2-4AB2-BC83-3850D770ACBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Data", "UrbanBooks.Data\UrbanBooks.Data.csproj", "{06C3811E-1D64-4B26-AE5F-A3E87EC59EB9}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Entity", "UrbanB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Service", "UrbanBooks.Service\UrbanBooks.Service.csproj", "{B065B6F1-817D-4E8A-AB58-BD7CD85354A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanBooks.Web", "UrbanBooks.Web\UrbanBooks.Web.csproj", "{B82FD9FC-E68E-477E-89F3-AF3162FE0E76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{628DB26B-7771-4496-A175-73AD3FBE320A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{628DB26B-7771-4496-A175-73AD3FBE320A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{628DB26B-7771-4496-A175-73AD3FBE320A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{628DB26B-7771-4496-A175-73AD3FBE320A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{719C615C-54C2-4AB2-BC83-3850D770ACBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{719C615C-54C2-4AB2-BC83-3850D770ACBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719C615C-54C2-4AB2-BC83-3850D770ACBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{B065B6F1-817D-4E8A-AB58-BD7CD85354A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B065B6F1-817D-4E8A-AB58-BD7CD85354A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B065B6F1-817D-4E8A-AB58-BD7CD85354A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82FD9FC-E68E-477E-89F3-AF3162FE0E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82FD9FC-E68E-477E-89F3-AF3162FE0E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82FD9FC-E68E-477E-89F3-AF3162FE0E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82FD9FC-E68E-477E-89F3-AF3162FE0E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

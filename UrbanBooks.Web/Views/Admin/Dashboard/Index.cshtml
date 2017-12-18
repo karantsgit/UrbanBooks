@@ -1,0 +1,135 @@
+﻿@using UrbanBooks.Common;
+@using UrbanBooks.Entity;
+@using UrbanBooks.Web.Resource;
+@*@model Tuple<List<PendingInvoiceModel>, List<PendingPaymentModel>>*@
+<style>
+    .badge {
+        padding: 1px 7px 0px 7px !important;
+        border-radius: 14px !important;
+        font-size: 14px;
+    }
+
+    .table tbody tr td {
+        padding: 12px 20px;
+    }
+
+
+    .panel, .panel-flat {
+        border-top: 0px !important;
+    }
+
+    .panel-back {
+        color: #000;
+        background-color: #F9F9FD;
+    }
+</style>
+<div class="page-header" style="border-bottom:0px">
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4><i class="icon-home2 position-left" style="margin-top:-5px;"></i>Dashboard</h4>
+        </div>
+
+    </div>
+    <div class="breadcrumb-line">
+
+    </div>
+
+</div>
+<div class="content" style="padding-top:20px;">
+
+    <div class="row">
+
+    </div>
+</div>
+@Html.Partial("_Notification")
+<script>
+    function syncList(e) {
+        this.read();
+    }
+    function CreateInvoice(e) {
+        e.preventDefault();
+        var tr = $(e.target).closest("tr");
+        var data = this.dataItem(tr);
+        window.open('@Url.Action("Create","Invoice")?Key=' + data.Key, "_blank");
+    }
+    function AddPayment(e) {
+        e.preventDefault();
+        var tr = $(e.target).closest("tr");
+        var data = this.dataItem(tr);
+        window.open('@Url.Action("Create", "Payment")?Key=' + data.Key, "_blank");
+    }
+    function PendingInvoiceDataBound(e) {
+        var totalrecourds = 0;
+        var grid = $("#projectGrid").data("kendoGrid");
+        var gridData = grid.dataSource.view();
+        if (gridData.length > 0) {
+            for (var i = 0; i < 1 ; i++) {
+                totalrecourds = gridData[i].TotalRecords;
+            }
+        }
+        else {
+            $('#div_PendingInvoices').hide();
+        }
+        $("#spn_PendingInvoices").text(totalrecourds);
+    }
+    function upcomingInvoiceDataBound(e) {
+        var totalrecourds = 0;
+        var grid = $("#upcomingInvoiceGrid").data("kendoGrid");
+        var gridData = grid.dataSource.view();
+        if (gridData.length > 0) {
+            for (var i = 0; i < 1 ; i++) {
+                totalrecourds = gridData[i].TotalRecords;
+            }
+        }
+        $("#spn_UpcomingInvoices").text(totalrecourds);
+    }
+    function PendingPaymentDataBound(e) {
+        var totalrecourds = 0;
+        var grid = $("#invoiceGrid").data("kendoGrid");
+        var gridData = grid.dataSource.view();
+        if (gridData.length > 0) {
+            for (var i = 0; i < 1 ; i++) {
+                totalrecourds = gridData[i].TotalRecords;
+            }
+        }
+        $("#spn_PendingPayments").text(totalrecourds);
+    }
+    function overDuePaymentDataBound(e) {
+        var totalrecourds = 0;
+        var grid = $("#overDuePaymentGrid").data("kendoGrid");
+        var gridData = grid.dataSource.view();
+        if (gridData.length > 0) {
+            for (var i = 0; i < 1 ; i++) {
+                totalrecourds = gridData[i].TotalRecords;
+            }
+        }
+        $("#spn_OverduePayments").text(totalrecourds);
+    }
+
+    $(window).load(function () {
+        window.setTimeout(function () { ShowDashboard() }, 1000);
+    });
+
+    function ShowDashboard() {
+
+        if (parseInt($("#spn_UpcomingInvoices").text()) > 0 && $("#div_UpcomingInvoices").css("display") == 'none') {
+            $("#div_UpcomingInvoices").fadeIn('slow');
+            window.setTimeout(function () { ShowDashboard() }, 700);
+        }
+        if (parseInt($("#spn_PendingInvoices").text()) > 0 && $("#div_PendingInvoices").css("display") == 'none') {
+            $('#div_PendingInvoices').fadeIn('slow');
+            window.setTimeout(function () { ShowDashboard() }, 700);
+        }
+        if (parseInt($("#spn_OverduePayments").text()) > 0 && $("#div_OverduePayments").css("display") == 'none') {
+            $("#div_OverduePayments").fadeIn('slow');
+            window.setTimeout(function () { ShowDashboard() }, 700);
+        }
+        if (parseInt($("#spn_PendingPayments").text()) > 0 && $("#div_PendingPayments").css("display") == 'none') {
+            $('#div_PendingPayments').fadeIn('slow');
+            window.setTimeout(function () { ShowDashboard() }, 700);
+        }
+
+
+    }
+
+</script>

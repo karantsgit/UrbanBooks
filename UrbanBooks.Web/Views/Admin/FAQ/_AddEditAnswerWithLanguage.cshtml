@@ -1,0 +1,107 @@
+﻿@using UrbanBooks.Common;
+@using UrbanBooks.Entity;
+@using UrbanBooks.Web.Resource;
+
+@model UrbanBooks.Entity.FAQModel
+@{
+    Layout = null;
+}
+
+@Html.Partial("_Notification")
+@using (Html.BeginForm("SaveQuestion", ControllerHelper.FAQ, FormMethod.Post, new { @id = "formQuestionAnswer" }))
+{
+    @Html.HiddenFor(x => x.FAQId)
+    @Html.HiddenFor(x => x.QuestionId)
+    @Html.HiddenFor(x => x.UserId)
+
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.LanguageId)</label>
+            <div class="col-lg-9">
+                @Html.DropDownListFor(m => m.LanguageId, new SelectList((IEnumerable<SelectListItem>)ViewBag.LanguageList, "Value", "Text"), CommonHelper.PleaseSelect, new { @class = "form-control", @maxlength = "100", @style = "height:40px", @tabindex = "1" })
+                @Html.ValidationMessageFor(m => m.LanguageId)
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.Question)</label>
+            <div class="col-lg-9">
+                @Html.TextBoxFor(m => m.Question, new { @class = "k-textbox", @maxlength = "100", @style = "height:40px", @tabindex = "2" })
+                @Html.ValidationMessageFor(m => m.Question)
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-12">
+            <label for="Name" class="col-lg-3">@Html.LabelFor(x => x.Answer)</label>
+            <div class="col-lg-9">
+                @Html.TextBoxFor(m => m.Answer, new { @class = "k-textbox", @maxlength = "100", @style = "height:40px", @tabindex = "3" })
+                @Html.ValidationMessageFor(m => m.Answer)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9" style="text-align:right !important">
+                <button class="btn btn-primary mr-5" id="btnSaveQuestionAnswer" type="button" tabindex="4">Submit</button>
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Close" tabindex="5">
+            </div>
+        </div>
+    </div>
+}
+<script>
+
+    $('#btnSaveQuestionAnswer').click(function (e) {
+        if ($.validator.unobtrusive != undefined) {
+            $.validator.unobtrusive.parse("form");
+        }
+        if ($('#formQuestionAnswer').valid()) {
+            var formdata = $('form').serialize();
+            $.ajax({
+                url: '@Url.Action("SaveAnserForLanguage", ControllerHelper.FAQ)',
+                async: false,
+                type: 'POST',
+                data: formdata,
+                success: function (data) {
+                    if (data == '') {
+                        GetJsaRecord();
+                        showNotification('FAQ Saved Successfully.', '@Enums.NotifyType.SuccessMessage.GetHashCode()');
+                        $('#myQuestionByLAnguageModal').modal('toggle');
+                    }
+                    else {
+                        showNotification(data, '@Enums.NotifyType.ErrorMessage.GetHashCode()');
+                    }
+                }
+            });
+        }
+    });
+
+
+    $('#LanguageId').change(function () {
+        
+        var Id = $('#LanguageId').val();
+        var QuestionId = $('#QuestionId').val();
+        if (Id != 'undefined' && Id != null && Id != '') {
+            $.ajax({
+                url: encodeURI('@Url.Action("GetQuestionAnswerByLanguange", ControllerHelper.FAQ)'),
+                data: { LanguangeId: Id, QuestionId: QuestionId },
+                type: "POST",
+                cache: false,
+                async: false,
+                dataType: 'json',
+                success: function (data) {
+                    if (data != '') {
+                        $('#Question').val(data.Question);
+                        $('#Answer').val(data.Answer);
+                        $('#FAQId').val(data.FAQId);
+                        //$('#QuestionId').val(data.QuestionId);
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+

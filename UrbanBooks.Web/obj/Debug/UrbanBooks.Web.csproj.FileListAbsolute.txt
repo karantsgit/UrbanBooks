@@ -1,0 +1,196 @@
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.csprojResolveAssemblyReference.cache
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.Resource.Label.resources
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.csproj.GenerateResource.Cache
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\ApplicationInsights.config
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\csc.exe
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\vbc.exe
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\VBCSCompiler.exe
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Web.dll.config
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Web.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Web.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Antlr3.Runtime.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\EntityFramework.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\EntityFramework.SqlServer.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.Web.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Newtonsoft.Json.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Owin.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Net.Http.Formatting.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Helpers.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Http.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Http.WebHost.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Mvc.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Optimization.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Razor.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.Razor.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Common.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Entity.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Service.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\WebGrease.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Data.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Common.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Entity.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Service.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.Web.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Net.Http.Formatting.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Http.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Http.WebHost.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Helpers.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Mvc.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Optimization.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.Razor.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\System.Web.WebPages.Razor.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Antlr3.Runtime.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Newtonsoft.Json.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\EntityFramework.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\EntityFramework.SqlServer.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\bin\UrbanBooks.Data.pdb
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.dll
+C:\Projects\UrbanBooks SVN\trunk\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\ApplicationInsights.config
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\csc.exe
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\vbc.exe
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\VBCSCompiler.exe
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Web.dll.config
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Web.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Web.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Antlr3.Runtime.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\EntityFramework.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\EntityFramework.SqlServer.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.Web.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Newtonsoft.Json.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Owin.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Net.Http.Formatting.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Helpers.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Http.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Http.WebHost.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Mvc.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Optimization.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Razor.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.Razor.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Common.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Entity.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Service.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\WebGrease.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Data.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Common.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Entity.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Service.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.Web.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Net.Http.Formatting.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Http.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Http.WebHost.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Helpers.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Mvc.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Optimization.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.Razor.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\System.Web.WebPages.Razor.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Antlr3.Runtime.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Newtonsoft.Json.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\EntityFramework.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\EntityFramework.SqlServer.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Projects\UrbanBooks\UrbanBooks.Web\bin\UrbanBooks.Data.pdb
+C:\Projects\UrbanBooks\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.csprojResolveAssemblyReference.cache
+C:\Projects\UrbanBooks\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.Resource.Label.resources
+C:\Projects\UrbanBooks\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.csproj.GenerateResource.Cache
+C:\Projects\UrbanBooks\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.dll
+C:\Projects\UrbanBooks\UrbanBooks.Web\obj\Debug\UrbanBooks.Web.pdb

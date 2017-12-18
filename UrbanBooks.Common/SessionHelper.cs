@@ -13,7 +13,12 @@ namespace UrbanBooks.Common
         {
             get
             {
-                return HttpContext.Current.Session["SelectedLanguage"] == null ? "eng" : (string)HttpContext.Current.Session["SelectedLanguage"];
+                return HttpContext.Current.Session["SelectedLanguage"] == null ? "1" : (string)HttpContext.Current.Session["SelectedLanguage"];
+                //ClearCurrentLanguage();
+                //HttpCookie objCookie = HttpContext.Current.Request.Cookies["Language"] ?? new HttpCookie("Language");
+                //objCookie.Values["LanguageId"] = LanguageId.ToString();
+                //objCookie.Expires = DateTime.Now.AddDays(30);
+                //HttpContext.Current.Response.Cookies.Add(objCookie);
             }
             set
             {
@@ -107,6 +112,43 @@ namespace UrbanBooks.Common
             HttpCookie objCookie = HttpContext.Current.Request.Cookies[Key] ?? new HttpCookie(Key);
             objCookie.Expires = DateTime.Now.AddDays(-1);
             HttpContext.Current.Response.Cookies.Add(objCookie);
+        }
+
+
+        public static void SetCurrentLanguage(string LanguageId)
+        {
+            ClearCurrentLanguage();
+            HttpCookie objCookie = HttpContext.Current.Request.Cookies["Language"] ?? new HttpCookie("Language");
+            objCookie.Values["LanguageId"] = LanguageId.ToString();
+            objCookie.Expires = DateTime.Now.AddDays(30);
+            HttpContext.Current.Response.Cookies.Add(objCookie);
+        }
+
+        public static HttpCookie GetCurrentLanguage()
+        {
+            HttpCookie objCookie = HttpContext.Current.Request.Cookies["Language"];
+            if (objCookie != null)
+            {
+                return objCookie;
+            }
+            return null;
+        }
+        public static void ClearCurrentLanguage()
+        {
+            HttpCookie objCookie = HttpContext.Current.Request.Cookies["Language"] ?? new HttpCookie("Language");
+            objCookie.Expires = DateTime.Now.AddDays(-1);
+            HttpContext.Current.Response.Cookies.Add(objCookie);
+        }
+
+        public static string getCurrentLanguageCookiesValues()
+        {
+            string LanguageId = "eng";
+            HttpCookie objCookie = SessionHelper.GetCurrentLanguage();
+            if (objCookie != null)
+            {
+                LanguageId = Convert.ToString(objCookie.Values["LanguageId"]);
+            }
+            return LanguageId;
         }
     }
 }
