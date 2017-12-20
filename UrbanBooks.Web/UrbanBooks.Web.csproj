@@ -416,7 +416,6 @@
     <Content Include="Views\Shared\_LanguageDropDown.cshtml" />
     <Content Include="Views\Admin\Login\Index.cshtml" />
     <Content Include="Views\Shared\_Notification.cshtml" />
-    <Content Include="Views\Home\BannerSlider.cshtml" />
     <Content Include="Views\Admin\Dashboard\Index.cshtml" />
     <Content Include="Views\Admin\FAQ\Index.cshtml" />
     <Content Include="Views\Admin\FAQ\Question.cshtml" />
@@ -436,6 +435,7 @@
     <Content Include="Views\Admin\FAQ\AnswerQuestion.cshtml" />
     <Content Include="Views\Admin\FAQ\_AddEditAnswerQuestion.cshtml" />
     <Content Include="Views\Admin\FAQ\_AddEditAnswerWithLanguage.cshtml" />
+    <Content Include="Views\Home\BannerSlider.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

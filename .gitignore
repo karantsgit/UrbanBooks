@@ -34,3 +34,5 @@ UrbanBooks/UrbanBooks.Web.csproj
 UrbanBooks/UrbanBooks.Web.csproj.user
 UrbanBooks/UrbanBooks.Web.csproj
 .vs/config/applicationhost.config
+UrbanBooks.Web/bin/UrbanBooks.Data.dll.config
+UrbanBooks.Web/obj/Debug/UrbanBooks.Web.csproj.CopyComplete
